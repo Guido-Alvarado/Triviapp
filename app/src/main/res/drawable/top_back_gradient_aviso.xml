@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo del botón -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="40dp" />
+            <gradient
+                android:startColor="@color/white"
+                android:endColor="@color/white"
+                android:angle="45" />
+        </shape>
+    </item>
+
+    <!-- Contorno del botón -->
+    <item android:left="1dp" android:right="1dp" android:top="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="40dp" />
+            <stroke
+                android:width="5dp"
+                android:color="@color/azul_medio" />
+        </shape>
+    </item>
+</layer-list>

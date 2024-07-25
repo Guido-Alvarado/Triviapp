@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llFondo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fondo_negro_bordes_redondos"
+            android:backgroundTint="@color/white"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pregunta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Pregunta"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"></TextView>
+
+                <ImageView
+                    android:id="@+id/imagenV"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/verificado" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/expadable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/rc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Respuesta C"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ri1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rc"
+                    android:padding="10dp"
+                    android:text="Respuesta I"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/ri2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ri1"
+                    android:padding="10dp"
+                    android:text="respuesta I"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/ri3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ri2"
+                    android:padding="10dp"
+                    android:text="Respuesta I"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/idp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ri3"
+                    android:padding="16dp"
+                    android:text="Respuesta C"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/creador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ri3"
+                    android:layout_alignParentEnd="true"
+                    android:padding="10dp"
+                    android:text="creador"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/adminis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/creador"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/editar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="20dp">
+
+                        <Button
+                            android:id="@+id/bteliminar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="10dp"
+                            android:text="ELIMINAR"
+                            android:textColor="@color/red"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content">
+
+                        </Space>
+
+                        <Button
+                            android:id="@+id/bteditar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="EDITAR"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnVerificar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adminis"
+                    android:layout_marginTop="5dp"
+                    android:elevation="20dp"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/Pverificado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="10dp"
+                        android:text="VERIFICADO"
+                        android:textColor="@color/color_gris"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/verificar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="VERIFICAR"
+                        android:textColor="@color/green"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llApuntes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgVerifApuntes"
+                    android:layout_width="38dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/tituloApuntes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tituloApuntes"
+                    app:layout_constraintTop_toTopOf="@+id/tituloApuntes"
+                    app:srcCompat="@drawable/verificado" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgApuntes"
+                    android:layout_width="94dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/apunte"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:shapeAppearanceOverlay="@style/circular" />
+
+                <TextView
+                    android:id="@+id/tituloApuntes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="Apuntes Quimicas"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imgApuntes"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/precioApuntes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="Precio 2000$"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/autor"
+                            app:layout_constraintStart_toStartOf="@+id/autor">
+
+                        </TextView>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutApuntesExpandible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/informacion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="DESCRIPCIÓN"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <HorizontalScrollView
+                    android:id="@+id/llImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/informacion1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/app_name">
+
+                    <LinearLayout
+                        android:id="@+id/llimgs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgApuntes1"
+                            android:layout_width="190dp"
+                            android:layout_height="240dp"
+                            android:layout_marginTop="-1dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/apunte"
+                            android:visibility="visible"
+                            app:shapeAppearanceOverlay="@style/circular" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgApuntes2"
+                            android:layout_width="190dp"
+                            android:layout_height="240dp"
+                            android:layout_marginTop="-1dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/apunte"
+                            android:visibility="visible"
+                            app:shapeAppearanceOverlay="@style/circular" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgApuntes3"
+                            android:layout_width="190dp"
+                            android:layout_height="240dp"
+                            android:layout_marginTop="-1dp"
+                            android:src="@drawable/apunte"
+                            android:visibility="visible"
+                            app:shapeAppearanceOverlay="@style/circular" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/infApuntes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llImg"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Informacion"
+                    android:textColor="@color/black"
+                    android:textSize="15sp">
+
+                </TextView>
+
+
+                <Button
+                    android:id="@+id/btncomprar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/infApuntes"
+                    android:backgroundTint="@color/green"
+                    android:elevation="10dp"
+                    android:padding="5dp"
+                    android:text="OBTENER"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/llAdminApuntes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btncomprar"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="20dp"
+                        android:padding="5dp">
+
+                        <ProgressBar
+                            android:id="@+id/pbelimItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                        </ProgressBar>
+
+                        <Button
+                            android:id="@+id/btneliminarA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorPositiveButton"
+                            android:elevation="10dp"
+                            android:padding="5dp"
+                            android:text="ELIMINAR"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnEditarI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/azul"
+                            android:padding="5dp"
+                            android:text="EDITAR"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnverificarItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/naranja"
+                        android:elevation="10dp"
+                        android:text="VERIFICAR"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

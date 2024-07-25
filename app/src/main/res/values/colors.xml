@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="azul_medio">#F81131D5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="green">#37cb95</color>
+    <color name="naranja">#CB6137</color>
+    <color name="red">#de3c63</color>
+    <color name="azul">#F51359E4</color>
+
+    <color name="background">#f2f0f4</color>
+    <color name="card_background">#ffff</color>
+    <color name="text_color">#1b1b1b</color>
+    <color name="text_secondery_color">#44464e</color>
+    <color name="color_gris">#636570</color>
+    <color name="colorPositiveButton">#FF4081</color>
+    <color name="colorNegativeButton">#3F51B5</color>
+    <color name="colorFabPressed">#00FF00</color> <!-- Cambia a tu color verde deseado -->
+    <color name="colorFabNormal">#00FF00</color>
+</resources>
